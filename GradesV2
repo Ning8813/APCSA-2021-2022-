@@ -1,0 +1,81 @@
+
+/**
+ * Write a description of class GradesV2 here.
+ *
+ * @author Josephine Chun
+ * @version 
+ */
+public class GradesV2
+{
+    public static void main(String[ ] args)
+{
+    int numTests = 0; //number of tests
+    int testGrade = 0; //individual test grade
+    int totalPoints = 0; //total points for all tests
+    double average = 0.0; //average grade
+    
+    //1
+        testGrade = 95;         
+        numTests=1;
+        totalPoints += testGrade;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+"  Average Score:"+(double)average);
+        
+    //2
+        testGrade = 73; 
+        numTests = numTests ++;
+        totalPoints += testGrade;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //3
+        testGrade = 91; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //4
+        testGrade = 82; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //5
+        testGrade = 99; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //6
+        testGrade = 93; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //7
+        testGrade = 72; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //8
+        testGrade = 79; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    //9
+        testGrade = 97; 
+        totalPoints += testGrade;
+        numTests = numTests ++;
+        average = totalPoints / numTests;
+        System.out.println("Test #"+numTests+ " Test Grade: "+testGrade+" Total Points:"+totalPoints+" Average Score:"+(double)average);
+        
+    }
+}
