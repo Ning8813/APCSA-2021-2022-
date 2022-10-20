@@ -1,0 +1,57 @@
+/**
+ * This class demonstrates the use of several members of the Math class.
+ *
+ *     NOTE: There are multiple segments of code below. After you understand
+ *           the code in one section, delete block comment symbols (slash
+ *           and asterisk) in order to continue discovering.
+ *
+ * @author Josephine Chun   
+ * @version 30/09/2021
+ */
+public class PyTheorem
+{
+    public static void main(String[ ] args)
+    {
+        //define the names of triangles
+        int t1 = 1;
+        int t2 = 2;
+
+        double doubleside1 = (Math.random()*23)+5;
+        int intside1 = (int)doubleside1;
+        
+        double doubleside2 = (Math.random()*23)+5;
+        int intside2 = (int)doubleside2;
+        
+        //powers
+        double power = 2;
+        
+        //squaring and rooting
+        double a = (Math.pow(intside1, power)); 
+        double b = (Math.pow(intside2, power));
+        double ab = a + b;
+        
+        System.out.print("Triangle " + t1 + ":");
+        System.out.print(" Side" + 1 + ": " + intside1);
+        System.out.print(" Side" + 2 + ": " + intside2);
+        System.out.print(" Hypotenuse: " + Math.sqrt(ab));
+        
+        System.out.print(" ");
+        
+        double doubleside3 = (Math.random()*23)+5;
+        int intside3 = (int)doubleside3;
+        
+        double doubleside4 = (Math.random()*23)+5;
+        int intside4 = (int)doubleside4;
+        
+        //squaring and rooting 2.0
+        double c = (Math.pow(intside3, power)); 
+        double d = (Math.pow(intside4, power));
+        double cd = c + d;
+        
+        System.out.println("Triangle " + t2 + ":");
+        System.out.print(" Side" + 1 + ": " + intside3);
+        System.out.print(" Side" + 2 + ": " + intside4);
+        System.out.print(" Hypotenuse: " + Math.sqrt(cd));
+        
+    }//end of main method
+}//end of class
