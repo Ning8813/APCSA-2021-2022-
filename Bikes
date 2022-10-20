@@ -1,0 +1,39 @@
+
+/**
+ * Write a description of class Bikes here.
+ *
+ * @Josephine Chun
+ * @20 Jan 2022
+ */
+public class Bikes
+{
+    private String myColor;
+    private double myCost;
+    private int myYear;
+    
+    public Bikes (String color, double cost, int year)
+    {
+        myColor = color;
+        myCost = cost;
+        myYear = year;
+    }
+    public void applyStop()
+    {
+        // some code;
+    }
+    public void applyBrake()
+    {
+        //some code;
+    }
+      public void applyReverse()
+    {
+        //some code;
+    }
+    
+    Bikes a = new Bikes("red", 80000, 3);
+    Bikes b = new Bikes("blue", 150000, 1);
+    Bikes c = new Bikes("black", 3000, 9);
+    
+    
+    
+}
