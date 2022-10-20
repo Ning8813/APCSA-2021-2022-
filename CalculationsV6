@@ -1,0 +1,72 @@
+public class CalculationsV6
+{
+    public static void main(String[ ] args)
+    {
+        // Declare integer variables
+      int iNum1 = 25;
+      int iNum2 = 9;
+      double dNum1 = 43.21;
+      double dNum2 = 3.14;
+      
+        // Addition
+        System.out.println("Addition");
+        System.out.println(iNum1 + " + " + iNum2 + " = " + (iNum1 + iNum2));
+        System.out.println(dNum1 + " + " + dNum2 + " = " + (dNum1 + dNum2));
+        System.out.println();
+        
+      int iNum3 = 11;
+      double dNum3 = 10.0;
+      
+        // Subtraction
+        System.out.println("Subtraction");
+        System.out.println(iNum3 + " - " + iNum2 + " - " + iNum1 + " = " + (iNum3 - iNum2 - iNum1));
+        System.out.println(dNum2 + " - " + dNum3 + " = " +(dNum2 - dNum3));
+        System.out.println();
+        
+        // Multiplication
+        System.out.println("Multiplication");
+        System.out.println(iNum1 + " * " + iNum2 + " = " +(iNum1 * iNum2) ); 
+        System.out.println(dNum2 + " * " + dNum3 + " * " + dNum3 + "=" + (dNum2 * dNum3 * dNum3));
+        System.out.println();
+        
+        // Division
+        System.out.println("Division");
+        System.out.println(iNum2 + " / " + iNum1 + " = " + (iNum2 / iNum1));
+        System.out.println(dNum2 + " - " + dNum3 + " = " + (dNum2 / dNum3 ));
+        System.out.println();
+         
+        // Modulus operator
+        System.out.println("Modulus");
+        System.out.println(iNum3 + " % " + iNum2 + " = " + (11 % 9));
+        System.out.println(dNum3 + " % " + dNum2 + " =" + (dNum3 % dNum2));
+        System.out.println();
+        
+        // 1.08 Additional int Equations
+        
+        int iNum4 = 8;
+        int iNum5 = 13;
+        int iNum6 = 23;
+        
+        System.out.println("Additional int Equations");
+        System.out.println (iNum4 + " + " + iNum5 + " + " + iNum6 + " = " + (iNum4 + iNum5 + iNum6));
+        System.out.println (iNum5 + " - " + iNum6 + " - " + iNum6 + " = " + (iNum5 - iNum6 - iNum6));
+        System.out.println (iNum1 + " * " + iNum3 + " * " + iNum5 + " = " + (iNum1 * iNum3 * iNum5));
+        System.out.println (iNum4 + " / " + iNum2 + " = " + (iNum4 / iNum2));
+        System.out.println (iNum2 + " % " + iNum5 + " = " + (iNum2 % iNum5));
+        System.out.println ();
+        
+        // 1.09 Additional double Equations
+        
+        double dNum4 = 89.9;
+        double dNum5 = 58.5;
+        double dNum6 = 24.3;
+        
+        System.out.println("Additional double Equations");
+        System.out.println (dNum4 + " + " + dNum5 + " + " + dNum6 + " = " + (dNum4 + dNum5 + dNum6));
+        System.out.println (dNum5 + " - " + dNum6 + " - " + dNum6 + " = " + (dNum5 - dNum6 - dNum6));
+        System.out.println (dNum1 + " * " + dNum3 + " * " + dNum5 + " = " + (dNum1 * dNum3 * dNum5));
+        System.out.println (dNum4 + " / " + dNum2 + " = " + (dNum4 / dNum2));
+        System.out.println (dNum2 + " % " + dNum5 + " = " + (dNum2 % dNum5));
+        System.out.println ();
+    } // end of main method
+} // end of class
