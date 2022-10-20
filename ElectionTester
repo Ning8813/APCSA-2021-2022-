@@ -1,0 +1,151 @@
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Tests the Candidate class.
+ *
+ * @author Josephine Chun
+ * @version 20 Apr 2022
+ */
+public class ElectionTesterV8 {
+    public static void printVotes(List<Candidate> election) {
+        for (Candidate c : election) {
+            System.out.println(c);
+        }
+    }
+
+    public static int getTotal(List<Candidate> election) {
+        int total = 0;
+        for (Candidate c : election) {
+            total += c.getVotes();
+        }
+        return total;
+    }
+
+    public static void printResults(List<Candidate> election) {
+        double total = getTotal(election);
+        System.out.printf("%-24s%-26s%s%n", "Candidate", "Votes Received", "% of Total Votes");
+        for (Candidate c : election) {
+            System.out.printf("%-24s%-26d%d%n", c.getName(), c.getVotes(), (int) ((c.getVotes() / total) * 100));
+        }
+    }
+
+    public static void replaceVotes(List<Candidate> election, String findName, int replaceVotes) {
+        for (int i = 0; i < election.size(); i++) {
+            if (election.get(i).getName().equals(findName)) {
+                election.get(i).setVotes(replaceVotes);
+            }
+        }
+    }
+
+    public static void replaceCandidate(List<Candidate> election, String findName, String replaceName,
+            int replaceVotes) {
+        for (int i = 0; i < election.size(); i++) {
+            if (election.get(i).getName().equals(findName)) {
+                election.get(i).setName(replaceName);
+                election.get(i).setVotes(replaceVotes);
+            }
+        }
+    }
+
+    public static void insertPosition(List<Candidate> election, int location, String addN, int addV) {
+        election.add(location, new Candidate(addN, addV));
+    }
+
+    public static void insertCandidate(List<Candidate> election, String find, String addN, int addV) {
+        int location = 0;
+        for (int i = 0; i < election.size(); i++) {
+            if (election.get(i).getName().equals(find)) {
+                location = i;
+            }
+        }
+        election.add(location, new Candidate(addN, addV));
+    }
+
+    public static void deleteByLoc(List<Candidate> election, int location) {
+        election.remove(location);
+    }
+
+    public static void deleteByName(List<Candidate> election, String findN) {
+        int location = -1;
+        int i;
+        for (i = 0; i < election.size(); i++)
+            if (election.get(i).getName().equals(findN)) {
+                location = i;
+                break;
+            }
+
+        if (location >= 0) {
+            election.remove(location);
+        }
+    }
+
+    public static void main(String args[]) {
+        List<Candidate> election = new ArrayList<Candidate>();
+        election.add(new Candidate("Johnny Appleseed", 5000));
+        election.add(new Candidate("Mary Brown", 4000));
+        election.add(new Candidate("Michael Jones", 6000));
+        election.add(new Candidate("Timothy Wood", 2500));
+        election.add(new Candidate("Clare Stone", 1800));
+        election.add(new Candidate("Ken Robinson", 3000));
+        election.add(new Candidate("Rebecca Williams", 2000));
+        election.add(new Candidate("Catherine Turner", 8000));
+        election.add(new Candidate("Tory Wilson", 500));
+        election.add(new Candidate("Taylor Davis", 10000));
+        System.out.println("Original Results:");
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Changing Michael Jones to Eric Harris");
+        replaceCandidate(election, "Michael Jones", "Eric Harris", election.get(2).getVotes());
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Changing Ken Robinson votes to 2500:");
+        replaceVotes(election, "Ken Robinson", 2500);
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Replacing Catherine Turner with Jonathan Walker");
+        replaceCandidate(election, "Catherine Turner", "Jonathan Walker", 8500);
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Added Scott King, 19300 votes:");
+        insertPosition(election, 5, "Scott King", 19300);
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Added George Baker, 1100 votes");
+        insertCandidate(election, "Jonathan Walker", "George Baker", 1100);
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Deleting location 6: ");
+        deleteByLoc(election, 6);
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+        System.out.println();
+        System.out.println("Deleting Jonathan Walker: ");
+        deleteByName(election, "Jonathan Walker");
+        System.out.println();
+        printResults(election);
+        System.out.println();
+        System.out.println("Total number of votes in election: " + getTotal(election));
+    }
+}
