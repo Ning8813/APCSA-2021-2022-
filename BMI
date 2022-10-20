@@ -1,0 +1,57 @@
+/**
+ * This program calculates a person's BMI based on their weight in pounds
+ * and height in inches.
+ * @author Josephine Chun
+ * @version 21/10/21
+ */
+import java.util.Scanner;
+public class BMI
+{
+    public static void main(String [] args)
+    {
+        Scanner in = new Scanner(System.in);
+
+        //Gather Input
+        System.out.print("Enter your name (first last): ");
+        String Name = in.next();
+        String LastName = in.nextLine();
+        
+        System.out.print("Enter your weight in pounds: ");
+        String weightPounds = in.next();
+        
+
+        System.out.print("Enter your height in inches: ");
+        String heightInches = in.next();
+        
+        String Category = "";
+        
+        int weightLbs = Integer.parseInt(weightPounds);
+        int heightIn = Integer.parseInt(heightInches);
+
+        //Conversion
+        double heightCm = 2.54 * heightIn;
+        double weightKg = 0.45359237 * weightLbs;
+        double heightM = heightCm / 100;
+
+        double BMI = weightKg / (heightM * heightM);
+        
+        if (BMI <= 18.5)
+            Category = "Underweight";
+        else if ( BMI<= 24.9 )
+            Category = "Normal/Healthy Weight";
+        else if (BMI < 29.9)
+            Category = "Overweight";
+        else if (BMI >= 29.9)
+            Category = "Obese";
+
+
+        System.out.println("Body Mass Index Calculator");
+        System.out.println("==========================");
+        System.out.println("Name: " + Name + LastName);
+        System.out.println("Weight (kg): " + (int)(weightKg));
+        System.out.println("Height (m): " + (int)(10 * heightCm)/10.0 );
+        System.out.println("BMI: " + BMI);
+        System.out.println("Category: " + Category);
+    }
+    
+}
