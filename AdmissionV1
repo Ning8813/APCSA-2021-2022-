@@ -1,0 +1,39 @@
+/**
+ * The purpose of this program is to count the number of
+ * tickets sold and the amount of money received.
+ * 
+ * @author Josephine Chun 
+ * @version 06/08/21
+ */
+public class AdmissionV1
+{
+    public static void main(String[ ] args)
+    {
+        //local variables       
+        int counter = 0;            //total tickets sold; local variable of int initial value 0
+        double ticketPrice = 0.0;   //cost of student ticket; local variable double intial value 0.0
+        double totalSales = 0.0;    //total sales; local variable double intial value 0.0
+        
+        System.out.print("Number of tickets\tTotal Sales: $\n");      
+        //“\t” prints a TAB and "\n" prints a line return.
+        //calculate total ticket sales at the game
+        ticketPrice = 5.50;         //assigns a value to the ticketPrice variable
+        counter++;
+        totalSales += ticketPrice;
+        System.out.println("\t\t" + counter + "\t\t" + totalSales); 
+        
+        //calculate total ticket sales at the game
+        ticketPrice = 5.50;         //ticket price
+        counter++;
+        totalSales += ticketPrice;
+        System.out.println("\t\t" + counter + "\t\t" + totalSales); 
+        //adds the current value of totalSales to ticketPrice and assigns the resulting value to totalSales
+        
+        //calculate total ticket sales at the game
+        ticketPrice = 5.50;         //ticket price
+        counter++;
+        totalSales += ticketPrice;
+        System.out.println("\t\t" + counter + "\t\t" + totalSales); 
+        //adds the current value of totalSales to ticketPrice and assigns the resulting value to totalSales
+    }//end of main method
+}//end of class
