@@ -1,0 +1,20 @@
+
+/**
+ * Write a description of class ForEachLoops here.
+ *
+ * @author Josephine Chun
+ * @version 
+ */
+public class ForEachLoops
+{
+    public static void main (String []args)
+    {
+int i = 0;
+String arrNum;
+while (i <= arrNum.length)
+{
+   System.out.println(arrNum[i]);
+   i++;
+}
+    }
+}
