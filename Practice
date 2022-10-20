@@ -1,0 +1,65 @@
+
+/**
+ * Exam practice
+ *
+ * @Josephine Chun
+ * @6 Feb 2022
+ */
+import java.util.*;
+
+public class ExamPractice
+{
+    public static void main (String [] args)
+    {
+        // SCANNERS
+        Scanner scanner = new Scanner (System.in);
+        String userInput = "";
+        
+        System.out.print("Please enter your cheat code: ");
+        userInput = scanner.nextLine();
+        
+        if (userInput.toUpperCase().equals ("CHEAT1")){
+            System.out.println("You have acquired Cheat 1.");
+        }
+        
+        if (userInput.toUpperCase().equals ("JETPACK")){
+            System.out.println("You have acquired a jetpack.");
+        }
+        
+        else {
+            System.out.println("Error. Invalid code.");
+        }
+        
+        // BOOLEANS
+        boolean boolean1 = true;
+        boolean boolean2 = false;
+        
+        if (boolean1 == boolean2) {
+          System.out.println("The machine is not broken.");
+        }
+        
+        else {
+            System.out.println("The machine is now fixed.");
+        }
+        
+        // BACK TO BASICS
+        int myNum = 5;
+            myNum ++;
+            System.out.println(myNum);
+        
+            int theNum;
+            for (theNum = 2; theNum < 4; theNum ++)
+            {
+                System.out.println(theNum);
+            }
+            
+            System.out.println(myNum + theNum);
+            
+        double x = (double)myNum / (double)theNum;
+        System.out.println(x);
+            // changing ints to doubles or floats
+            // char to iny is ok; use unicode to translate numbers into characters
+            
+        
+    }
+}
