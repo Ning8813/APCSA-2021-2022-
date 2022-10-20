@@ -1,0 +1,35 @@
+/**
+ * Josephine Chun
+ * 6 Feb 2022
+ */
+
+class Card
+{
+    private String name;
+    private String suit;
+    private int value;
+    
+    public Card (String myName, String mySuit, int myValue)
+    {
+        name = myName;
+        suit = mySuit;
+        value = myValue;
+        
+        System.out.println("Name:          Suit:          Value:          ");
+        System.out.println(name + "         " + suit + "          " + value);
+    }
+}
+
+public class CardMain
+{
+    public static void main (String []args)
+    {
+        Card card1 = new Card ("King", "Spades", 10);
+        Card card2 = new Card ("Ace", "Diamonds", 1);
+        Card card3 = new Card ("Queen", "Hearts", 10);
+        
+        
+    }
+    
+    
+}
