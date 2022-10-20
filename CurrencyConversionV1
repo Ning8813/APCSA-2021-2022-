@@ -1,0 +1,110 @@
+/**
+ * The Currency class converts an amount of money from a specific
+ * country into the equivalent currency of another country given 
+ * the current exchange rate.
+ *
+ * @author Josephine Chun
+ * @version 10/9/2021
+ */
+public class CurrencyConversionV1
+{
+    public static void main(String [ ] args)
+    {
+        //Declare and initialize local variables
+        double startingUSDollars = 6500.00;        // starting US Dollars
+
+        double ringgitSpent = 6391.50; // ringgit spent
+        double ringgitExchangeRate = 4.17; // 1 US dollar = 4.17 ringgit
+        double dollarsSpentMsia = 0.0; // US dollars spent in malaysia
+        double dollarsAfterMsia = 0.0; // US dollars remaining after malaysia
+        
+        double poundSpent = 1002.38; // pounds spent
+        double poundExchangeRate = 0.73; // 1 US dollar = 0.73 pounds
+        double dollarsSpentEngland = 0.0; // US dollars spent in england
+        double dollarsAfterEngland = 0.0; // US dollars remaining after england
+        
+        double ausdollarsSpent = 1420.69; // aus dollars spent; in US dollars: 1029.50
+        double ausdollarsExchangeRate = 1.38; // 1 US dollar = 1.38 aus dollars
+        double dollarsSpentAus = 0.0; // US dollars spent in aus
+        double dollarsAfterAus = 0.0; // US dollars remaining after aus
+
+        // Message to user stating purpose
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("This program converts an amount of money");
+        System.out.println("from a specific country into the equivalent");
+        System.out.println("currency of another country given the current");
+        System.out.println("exchange rate.");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println();
+
+        // Conversion
+        System.out.println("Starting US Dollars:            " + startingUSDollars);
+        System.out.println("");
+        System.out.println("Malaysia:");
+        System.out.println("Ringgit spent:                  " + ringgitSpent);
+            dollarsSpentMsia = ringgitSpent / ringgitExchangeRate; 
+        System.out.println("US Dollars Equivalent:          " + dollarsSpentMsia);
+            dollarsAfterMsia = startingUSDollars - dollarsSpentMsia;
+        System.out.println("US Dollars Remaining:           " + dollarsAfterMsia);
+        System.out.println("");
+        
+        System.out.println("England:");
+        System.out.println("Pounds spent:                   " + poundSpent);
+            dollarsSpentEngland = poundSpent / poundExchangeRate; 
+        System.out.println("US Dollars Equivalent:          " + dollarsSpentEngland);
+            dollarsAfterEngland = dollarsAfterMsia - dollarsSpentEngland;
+        System.out.println("US Dollars Remaining:           " + dollarsAfterEngland);
+        System.out.println("");
+
+        System.out.println("Australia:");
+        System.out.println("Australian dollars spent:       " + ausdollarsSpent);
+            dollarsSpentAus = ausdollarsSpent / ausdollarsExchangeRate; 
+        System.out.println("US Dollars Equivalent:          " + dollarsSpentAus);
+            dollarsAfterAus = dollarsAfterEngland - dollarsSpentAus;
+        System.out.println("US Dollars Remaining:           " + dollarsAfterAus);
+        System.out.println("");
+        
+        System.out.println("===============================================");
+        double dollarsAfterTravel = 0.0;
+            dollarsAfterTravel = startingUSDollars - dollarsAfterAus;
+        System.out.println("Remaining US Dollars:           " + dollarsAfterTravel);
+        
+        // Complete the code below for Souvenir Purchases
+         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("Souvenir Purchases");
+        System.out.println(" (all values in US Dollars) ");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+        //Calculations for Souvenir #1
+        int costItem1 = 12;                          //cost per item of first souvenir
+        int budget1 = 100;                           //budget for first item
+        int totalItems1 = 0;         //how many items can be purchased
+        int fundsRemaining1 = 0;  //how much of the budget is left
+
+        System.out.println("Item 1");
+        System.out.println("   Cost per item: $" + costItem1 );
+        System.out.println("   Budget: $"+ budget1);
+            totalItems1 = budget1 / costItem1;
+        System.out.println("   Total items purchased: " +  totalItems1);
+            fundsRemaining1 = budget1 - (costItem1 * totalItems1);
+        System.out.println("   Funds remaining: $"  +  fundsRemaining1);
+         System.out.println();
+
+        //Calculations for Souvenir #2
+        double costItem2 = 29.99;                          //cost per item of second souvenir
+        int budget2 = 500;                               //budget for second item
+        int totalItems2 = 0;     //how many items can be purchased
+        double fundsRemaining2 = 0.0;      //how much of the budget is left
+
+        System.out.println("Item 2");
+        System.out.println("   Cost per item: $" + costItem2 );
+        System.out.println("   Budget: $"+ budget2);
+            totalItems2 = budget2 / (int)costItem2;
+            totalItems2 = totalItems2 - 1;
+                // can I use math.floor(int)?
+        System.out.println("   Total items purchased: " + totalItems2);
+            fundsRemaining2 = budget2 - (costItem2 * totalItems2);
+        System.out.println("   Funds remaining: $"  +  fundsRemaining2);
+
+    } // end of main method
+} 
