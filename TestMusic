@@ -1,0 +1,91 @@
+/**
+ * Tests the Music class using a sequential search
+ *
+ * @author Josephine Chun
+ * @version 26 Apr 2022
+ */
+import java.util.*;
+public class TestMusic {
+    public static void main(String args[]) {
+        Music[] myMusic = { new Music("I Offer My Life", 1996, "Don Moen"),
+                new Music("Hey Jude", 1968, "The Beatles"),
+                new Music("Bridge Over Troubled Water", 1970, "Simon & Garfunkel"), new Music("Joy to the World", 1971, "Three Dog Night"),
+                new Music("Refiner's Fire", 2013, "Brian Doerksen"), new Music("New World", 2020, "Hua Chenyu"),
+                new Music("Begin Again", 2012, "Taylor Swift"), new Music("Let Go", 2002, "Avril Lavigne"),
+                new Music("Let it Go", 2007, "Tim McGraw"), new Music("Blank Space", 2014, "Taylor Swift") };
+
+        System.out.println("Music library:");
+        System.out.println("----------------");
+        printMusic(myMusic);
+        System.out.println();
+        System.out.println("Seach - Title - Hey Jude");
+        searchTitle(myMusic, "Hey Jude");
+        System.out.println();
+        System.out.println("Search - Title - Happy");
+        searchTitle(myMusic, "Happy");
+        System.out.println();
+        System.out.println("Search - Year - 2001");
+        searchYear(myMusic, 2001);
+        System.out.println();
+        System.out.println("Search - Year - 2013");
+        searchYear(myMusic, 2013);
+        System.out.println();
+        System.out.println("Search - Singer - Avril Lavigne");
+        searchSinger(myMusic, "Avril Lavigne");
+        System.out.println();
+        System.out.println("Search - Singer - Taylor Swift");
+        searchSinger(myMusic, "Taylor Swift");
+    }
+
+    public static void printMusic(Music[] m) {
+        for (Music song : m) {
+            System.out.println(song);
+        }
+    }
+
+    public static void searchTitle(Music[] m, String toFind) {
+        int found = -1;
+
+        for (int i = 0; i < m.length; i++)
+            if (m[i].getTitle().compareTo(toFind) == 0) {
+                found = i;
+                break;
+            }
+        if (found != -1) {
+            System.out.println("We found " + toFind + " in the library: ");
+            System.out.println(m[found]);
+        }
+        else
+            System.out.println(toFind + " is not in the library");
+    }
+
+    public static void searchYear(Music[] m, int toFind) {
+        System.out.println("Find results:");
+        int found = 0;
+        for (int i = 0; i < m.length; i++) {
+            if (m[i].getYear() == toFind) {
+                found++;
+                System.out.println(m[i]);
+            }
+        }
+        if (found > 0)
+            System.out.println("There were " + found + " listing(s) for " + toFind);
+        else
+            System.out.println("There are no listing(s) for " + toFind);
+    }
+
+    public static void searchSinger(Music[] m, String toFind) {
+        System.out.println("Find results:");
+        int found = 0;
+        for (int i = 0; i < m.length; i++) {
+            if (m[i].getArtist().compareTo(toFind) == 0) {
+                found++;
+                System.out.println(m[i]);
+            }
+        }
+        if (found > 0)
+            System.out.println("There were " + found + " listing(s) for " + toFind);
+        else
+            System.out.println("There are no listing(s) for " + toFind);
+    }
+}
